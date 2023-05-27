@@ -1,0 +1,209 @@
+:root {
+  /* Primary */
+  --color-soft-blue: hsl(215, 51%, 70%);
+  --color-cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --color-very-dark-blue: hsl(217, 54%, 11%);
+  --color-very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --color-very-dark-blue-line: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+}
+/* CSS Reset */
+
+/* Reset box sizing to border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margin and padding for all elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote,
+dl,
+dd,
+figure,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default font size and line height */
+
+/* Remove list styles (bullets/numbers) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default hyperlink styles */
+a {
+  text-decoration: none;
+}
+
+/* Reset form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  background-color: var(--color-very-dark-blue);
+  color: var(--color-white);
+  font-weight: 300;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 375px;
+  padding: 2rem 1.2rem;
+}
+
+.card-wrapper {
+  background-color: var(--color-very-dark-blue-card-bg);
+  border-radius: 1rem;
+  padding: 1.4rem;
+}
+
+.card-wrapper div {
+  width: 100%;
+}
+
+.thumbnal-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbnal-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98%;
+  background-color: var(--color-cyan);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.thumbnal-wrapper:hover::before {
+  opacity: 0.4;
+}
+
+.card-img-overlay {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-8%, -50%);
+  /* Tambahkan gaya lain sesuai kebutuhan */
+}
+
+.thumbnal-wrapper:hover .card-img-overlay {
+  display: block;
+}
+
+.thumbnail-img {
+  max-width: 100%;
+  border-radius: 0.6rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: var(--color-soft-blue);
+  margin-bottom: 0.8rem;
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-sub-wrapper {
+  display: flex;
+  color: var(--color-soft-blue);
+  align-items: center;
+}
+
+.price-sub-wrapper img {
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+.price-sub-wrapper .price-ethereum,
+.price-sub-wrapper .countdown {
+  font-size: 1rem;
+}
+
+.price-sub-wrapper .price-ethereum {
+  color: var(--color-cyan);
+  font-weight: 600;
+}
+
+.separator {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 1px;
+  background: var(--color-very-dark-blue-line);
+}
+
+.creator-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.image-avatar {
+  width: 32px;
+  margin-right: 1rem;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+}
+
+.creator-text {
+  font-size: 1rem;
+  color: var(--color-soft-blue);
+}
+
+.creator-text span {
+  color: var(--color-white);
+}
+
+.attribution {
+  text-align: center;
+}
