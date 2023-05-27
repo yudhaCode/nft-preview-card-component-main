@@ -143,7 +143,7 @@ body {
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--color-soft-blue);
   margin-bottom: 0.8rem;
 }
@@ -160,6 +160,11 @@ body {
   align-items: center;
 }
 
+.price-wrapper .price-sub-wrapper:nth-child(2) {
+  display: flex;
+  justify-content: end;
+}
+
 .price-sub-wrapper img {
   object-fit: contain;
   margin-right: 6px;
@@ -167,7 +172,7 @@ body {
 
 .price-sub-wrapper .price-ethereum,
 .price-sub-wrapper .countdown {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .price-sub-wrapper .price-ethereum {
@@ -196,7 +201,7 @@ body {
 }
 
 .creator-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--color-soft-blue);
 }
 
